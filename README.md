@@ -10,10 +10,12 @@ This is a totally passive optical detector for identifying low-frequency pulsed 
 
 Real-world testing using 3) photodiodes shows reliable detection of Flock plate capture attempts at speeds ranging from stopped to 65+ MPH highway speeds. It's expected that a single photodiode may also work, though it may require more effort in placement and optical design.
 
+Full disclosure: the code is written by AI because I'm not a software guy. Don't ask me why something is done a certain way - I don't know. 
+
 **What this is:**
 
-- A **receive-only** (passive) IR pulse detector intended for mobile, vehicle-mounted use.
-- Uses **multiple external photodiode sensors** mounted at different viewpoints (e.g., rear-left, rear-right, roofline) feeding a microcontroller inside the vehicle/enclosure.
+- A receive-only (passive) IR pulse detector intended for mobile, vehicle-mounted use.
+- Uses multiple external photodiode sensors mounted at different viewpoints (e.g., rear-left, rear-right, roofline) feeding a microcontroller inside the vehicle/enclosure.
 - Provides simple, real-time indication:
   - **System On** LED (green) when enabled via switch.
   - **Detection** LED (red) that latches briefly on confirmed pulse-train detection.
@@ -60,8 +62,8 @@ This project uses **XIAO "Dx/Ax" pin names** in code so the sketch matches the b
 | Detection LED (output) | D9           | latches briefly on detect        |
 | Active Buzzer (output) | D10          | DC-driven beeps (active buzzer)  |
 
-**Switch wiring:** D5 → switch → 3.3V (closed = ON)  
-**Buzzer wiring:** D10 → buzzer → GND (active buzzer)
+Switch wiring: D5 → switch → 3.3V (closed = ON)  
+Buzzer wiring: D10 → buzzer → GND (active buzzer)
 
 **Software Overview**
 
@@ -69,15 +71,15 @@ A code file for Arduino IDE is included in this repo.
 
 Per channel (no averaging across sensors - any sensor can flag a detection):
 
-- **Sampling:** ~1 kHz ADC reads per sensor.
-- **Baseline tracking:** Exponential moving average (EMA) tracks slow ambient changes.
-- **Pulse extraction:** Computes AC = sample - baseline (upward pulses assumed).
-- **Edge qualification:** When AC exceeds a threshold, a pulse edge is recorded (with a short refractory period to avoid retriggers).
-- **Frequency validation:** Time between pulse edges is measured; intervals are considered valid only if in **5-15 Hz** (67-200 ms).
-- **Confirmation:** Requires multiple consecutive valid intervals before asserting detection.
-- **Outputs:**
-  - **Detection LED:** latches for a short hold time after detection.
-  - **Buzzer:** beeps rapidly **only while valid in-band pulses are currently being observed** (no holdover).
+- Sampling: ~1 kHz ADC reads per sensor.
+- Baseline tracking: Exponential moving average (EMA) tracks slow ambient changes.
+- Pulse extraction: Computes AC = sample - baseline (upward pulses assumed).
+- Edge qualification: When AC exceeds a threshold, a pulse edge is recorded (with a short refractory period to avoid retriggers).
+- Frequency validation: Time between pulse edges is measured; intervals are considered valid only if in **5-15 Hz** (67-200 ms).
+- Confirmation: Requires multiple consecutive valid intervals before asserting detection.
+- Outputs:
+  - Detection LED: latches for a short hold time after detection.
+  - Buzzer: beeps rapidly **only while valid in-band pulses are currently being observed** (no holdover).
 
 If any channel confirms detection, the system indicates detection (channels are independent).
 

